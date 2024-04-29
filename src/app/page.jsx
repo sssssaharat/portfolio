@@ -14,12 +14,12 @@ export default function Home() {
         <section className="Title">
           <div className="relative items-center ">
             <div className="relative flex items-center justify-center">
-              <h1 className="absolute bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-9xl xs:text-7xl sm:text-[160px] md:text-[180px] lg:text-[200px] font-medium leading-tight text-transparent sm:leading-tight  md:leading-tight">
+              <div className="absolute bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-9xl xs:text-7xl sm:text-[160px] md:text-[180px] lg:text-[200px] font-medium leading-tight text-transparent sm:leading-tight  md:leading-tight">
                 Portfolio
-                <h1 className="text-8xl xs:text-9xl sm:text-7xl md:text-[130px] lg:text-[170px] ">
+                <div className="text-8xl xs:text-9xl sm:text-7xl md:text-[130px] lg:text-[170px] ">
                   sssssaharat
-                </h1>
-              </h1>
+                </div>
+              </div>
 
               <Image
                 className="relative grid place-content-center rounded-full w-1/2 sm:w-1/3 lg:w-1/4 "
@@ -36,7 +36,8 @@ export default function Home() {
             <p className="mt-6 text-2xl text-gray-100 font-light sm:text-3xl leading-tight text-transparent sm:leading-tight  md:leading-tight">
               Interested in{" "}
               <span className="text-indigo-500">Fontent, UX & UI designer</span>{" "}
-              focussing on designing own dashboard Trade & website Trade.
+              focussing on designing own<br></br>Trade dashboard & website
+              Trade.
             </p>
           </div>
         </section>
