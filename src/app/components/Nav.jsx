@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { HiMiniBars3BottomRight, HiMiniXMark } from "react-icons/hi2";
 import { Dialog } from "@headlessui/react";
 import Image from "next/image";
 function Nav() {
@@ -65,7 +65,10 @@ function Nav() {
             className=" items-center rounded-md text-gray-400 hover:text-gray-100"
             onClick={() => setMobileMenuOpen(true)}
           >
-            <Bars3Icon className="h-8 w-8 flex" aria-hidden="true" />
+            <HiMiniBars3BottomRight
+              className="h-8 w-8 flex"
+              aria-hidden="true"
+            />
           </button>
         </div>
         {/* Dailog */}
@@ -84,7 +87,7 @@ function Nav() {
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                <HiMiniXMark className="h-6 w-6" aria-hidden="true" />
               </button>
             </div>
             <div className="flex flex-col mt-6 gap-y-5">
