@@ -83,7 +83,7 @@ function About() {
           </div>
         </div>
       </div>
-      <div className="paralax">
+      <div className="paralax hidden lg:block">
         <style>
           {`
           .scroll-parent {
@@ -133,7 +133,7 @@ function About() {
             <div className="scroll-parent  ">
               <div className="scroll-element primary">
                 <div className="grid grid-cols-7  scroll-element items-center text-center text-zinc-400 text-2xl animate-primary">
-                  <p className=" gap-x-4 ">HTML</p>
+                  <p className="">HTML</p>
                   <p className="">CSS</p>
                   <p className="">JAVA</p>
                   <p className="">REACT</p>
@@ -143,7 +143,7 @@ function About() {
                 </div>
               </div>
               <div className="scroll-element secondary">
-                <div className="grid grid-cols-7  scroll-element items-center text-zinc-400 text-2xl  animate-secondary">
+                <div className="grid grid-cols-7 mx-8 scroll-element items-center text-zinc-400 text-2xl text-center animate-secondary">
                   <p className="">HTML</p>
                   <p className="">CSS</p>
                   <p className="">JAVA</p>
@@ -159,7 +159,7 @@ function About() {
       </div>
       <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
         <h1 className="text-white text-3xl mb-6 mx-6">Experience 🎯</h1>
-        <dl className="grid max-w-7xl mx-6 grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+        <dl className="grid max-w-7xl mx-6 grid-cols-1  gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
           {experience.map((ex) => (
             <div
               key={ex.id}
@@ -174,7 +174,7 @@ function About() {
               <dt className="font-medium text-indigo-500 sm:text-md leading-tight  sm:leading-tight  md:leading-tight">
                 {ex.project}
               </dt>
-              <dd className="mt-2 text-base leading-7 text-zinc-500">
+              <dd className="mt-2 text-base leading-7 text-zinc-500 ">
                 {ex.description}
               </dd>
             </div>

@@ -43,7 +43,7 @@ function Nav() {
           <div>
             <Link
               href="/contact"
-              className="inline-flex items-center rounded-full px-5 py-4 text-md font-medium text-zinc-200 ring-1 ring-inset ring-zinc-800 hover:bg-white hover:text-black"
+              className="inline-flex items-center rounded-full px-5 py-4 text-md font-medium text-zinc-900 bg-lime-400 ring-1 ring-inset ring-zinc-800 hover:bg-white hover:text-black"
             >
               Contact
             </Link>

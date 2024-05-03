@@ -1,13 +1,8 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 
 export default function Home() {
-  const [width, setWidth] = useState(0);
-  const updateWidth = () => {
-    const newWidth = window.innerWidth;
-    setWidth(newWidth);
-  };
+ 
   return (
     <div className="relative mx-auto max-w-7xl isolate  ">
       <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-6">
@@ -23,8 +18,8 @@ export default function Home() {
                 className="relative grid place-content-center rounded-full w-1/2 sm:w-1/3 lg:w-1/4 "
                 src="/asset/image33.png"
                 alt="Logo"
-                width={width < 1024 ? "400" : "200"}
-                height={width < 1024 ? "100" : "100"}
+                width={1024 }
+                height={1024}
               />
             </div>
           </div>

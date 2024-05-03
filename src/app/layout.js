@@ -8,6 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Portfolio",
   description: "Personal porfolio ",
+   icons: {
+    icon: 'asset/Hompage.png',
+   sizes: '32x32',
+  },
 };
 
 export default function RootLayout({ children }) {
