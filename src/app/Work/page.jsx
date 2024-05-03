@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-export function Work() {
+export default function Work() {
   return (
     <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-28">
       <div className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-7xl sm:text-[120px] md:text-[150px] lg:text-[200px]  font-medium leading-tight text-transparent sm:leading-tight  md:leading-tight">
@@ -133,4 +133,3 @@ export function Work() {
   );
 }
 
-export default Work;
