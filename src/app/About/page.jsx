@@ -10,7 +10,7 @@ import {
 } from "react-icons/hi2";
 
 
-function About() {
+export function About() {
   const icons = [
     { img: "icons/html.png", name: "HTML" },
     { img: "icons/css.png", name: "CSS" },
