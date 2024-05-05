@@ -4,7 +4,7 @@ import { useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 
 export default function Home() {
-  const ref = useRef < HTMLDivElement > null;
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1", "1.33 1.8"],

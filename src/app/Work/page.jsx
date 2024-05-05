@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 function Work() {
-  const ref = useRef < HTMLDivElement > null;
+  const ref = useRef (null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["0 1.7", "1.35 2.5"],

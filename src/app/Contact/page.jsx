@@ -3,7 +3,7 @@ import React from "react";
 import { useScroll, motion } from "framer-motion";
 import { useRef } from "react";
 function Contact() {
-  const re = useRef < HTMLDivElement > null;
+  const re = useRef  (null);
   const { scrollYProgress } = useScroll({
     target: re,
     offset: ["1 -1", "1 2"],

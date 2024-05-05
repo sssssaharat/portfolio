@@ -45,16 +45,11 @@ function About() {
     },
   ];
   const ref = useRef(null);
-  const re = useRef(null);
 
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["2 1", "0 0"],
   });
-  const variants = {
-    target: re,
-    offset: ["0 1", "1.33 1.8"],
-  };
 
   return (
     <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-28">
