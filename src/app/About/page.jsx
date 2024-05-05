@@ -9,8 +9,7 @@ import {
   HiOutlineBookmarkSquare,
 } from "react-icons/hi2";
 
-
-export default function About() {
+ function About() {
   const icons = [
     { img: "icons/html.png", name: "HTML" },
     { img: "icons/css.png", name: "CSS" },
@@ -186,4 +185,4 @@ export default function About() {
   );
 }
 
-
+export default About;
