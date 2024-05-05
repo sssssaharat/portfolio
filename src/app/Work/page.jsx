@@ -1,14 +1,31 @@
-import React from "react";
+"use client";
 import Image from "next/image";
-
- function Work() {
+import { useScroll, motion } from "framer-motion";
+import { useRef } from "react";
+function Work() {
+  const ref = useRef < HTMLDivElement > null;
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1.7", "1.35 2.5"],
+  });
+  
   return (
     <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-28">
-      <div className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-7xl sm:text-[120px] md:text-[150px] lg:text-[200px]  font-medium leading-tight text-transparent sm:leading-tight  md:leading-tight">
+      {/* Title */}
+      <motion.div
+        style={{ offset: ["start end", "end end"] }}
+        className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-7xl sm:text-[120px] md:text-[150px] lg:text-[200px]  font-medium leading-tight text-transparent sm:leading-tight  md:leading-tight"
+      >
         Let me show you
-      </div>
+      </motion.div>
       {/* Work1 */}
-      <div className="mx-auto max-w-7xl mt-64 py-16 sm:px-12 sm:py-2 lg:px-18 ">
+      <motion.div
+        style={{
+          scale: scrollYProgress,
+          opacity: scrollYProgress,
+        }}
+        className="mx-auto max-w-7xl mt-64 py-16 sm:px-12 sm:py-24 lg:px-18 "
+      >
         <div className="relative mx-6 rounded-2xl isolate overflow-hidden bg-lime-500 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
           <svg
             viewBox="0 0 1024 1024"
@@ -57,7 +74,11 @@ import Image from "next/image";
               </a>
             </div>
           </div>
-          <div className="relative mt-16 h-80 lg:mt-8 rounded-xl">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="relative mt-16 h-80 lg:mt-8 rounded-xl"
+          >
             <Image
               className="absolute left-0 top-0 w-[57rem] max-w-none "
               src="/asset/work1.png"
@@ -65,12 +86,18 @@ import Image from "next/image";
               width={1824}
               height={1080}
             />
-          </div>
+          </motion.div>
         </div>
-      </div>
+      </motion.div>
       {/* Work2 */}
       <div className="mx-auto max-w-7xl py-24 sm:px-6 sm:py-8 lg:px-8 ">
-        <div className="relative mx-6 rounded-2xl isolate overflow-hidden bg-zinc-900/60 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+        <motion.div
+          style={{
+            scale: scrollYProgress,
+            opacity: scrollYProgress,
+          }}
+          className="relative mx-6 rounded-2xl isolate overflow-hidden bg-zinc-900/60 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0"
+        >
           <svg
             viewBox="0 0 1024 1024"
             className="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 [mask-image:radial-gradient(closest-side,white,transparent)] sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
@@ -118,7 +145,11 @@ import Image from "next/image";
               </a>
             </div>
           </div>
-          <div className="relative mt-16 h-80 lg:mt-8 ">
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+            className="relative mt-16 h-80 lg:mt-8 "
+          >
             <Image
               className="absolute left-0 top-0 w-[57rem] max-w-none "
               src="/asset/work2.png"
@@ -126,8 +157,8 @@ import Image from "next/image";
               width={1824}
               height={1080}
             />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </div>
   );

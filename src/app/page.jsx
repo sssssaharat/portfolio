@@ -1,8 +1,14 @@
 "use client";
 import Image from "next/image";
+import { useScroll, motion } from "framer-motion";
+import { useRef } from "react";
 
 export default function Home() {
- 
+  const ref = useRef < HTMLDivElement > null;
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1.8"],
+  });
   return (
     <div className="relative mx-auto max-w-7xl isolate  ">
       <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-6">
@@ -18,14 +24,23 @@ export default function Home() {
                 className="relative grid place-content-center rounded-full w-1/2 sm:w-1/3 lg:w-1/4 "
                 src="/asset/image33.png"
                 alt="Logo"
-                width={1024 }
+                width={1024}
                 height={1024}
               />
             </div>
           </div>
         </section>
         <section className="present">
-          <div className="mx-auto max-w-2xl text-center sm:text-center py-32 sm:py-48 lg:py-64">
+          <motion.div
+            style={{
+              scale: scrollYProgress,
+              opacity: scrollYProgress,
+              stiffness: 100,
+              damping: 30,
+              restDelta: 0.001,
+            }}
+            className="mx-auto max-w-2xl text-center sm:text-center py-32 sm:py-48 lg:py-64"
+          >
             <p className="mt-6 text-2xl text-gray-100 font-light sm:text-4xl leading-tight  sm:leading-tight  md:leading-tight">
               Interested in
               <span className="text-indigo-500"> Fontent,UX & UI </span>
@@ -33,7 +48,7 @@ export default function Home() {
               focussing on designing own dashboard Trade and website Tecnical
               Trade.
             </p>
-          </div>
+          </motion.div>
         </section>
       </div>
     </div>

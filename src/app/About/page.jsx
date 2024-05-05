@@ -2,14 +2,14 @@
 
 import React from "react";
 import { Parallax } from "react-parallax";
-import Image from "next/image";
 import {
   HiOutlineHomeModern,
   HiOutlineBanknotes,
   HiOutlineBookmarkSquare,
 } from "react-icons/hi2";
-
- function About() {
+import { useScroll, motion } from "framer-motion";
+import { useRef } from "react";
+function About() {
   const icons = [
     { img: "icons/html.png", name: "HTML" },
     { img: "icons/css.png", name: "CSS" },
@@ -44,12 +44,29 @@ import {
       icon: HiOutlineBookmarkSquare,
     },
   ];
+  const ref = useRef(null);
+  const re = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["2 1", "0 0"],
+  });
+  const variants = {
+    target: re,
+    offset: ["0 1", "1.33 1.8"],
+  };
 
   return (
     <div className="mx-auto max-w-7xl py-32 sm:py-48 lg:py-28">
-      <div className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-7xl sm:text-[120px] md:text-[150px] lg:text-[200px]  font-medium leading-tight text-transparent sm:leading-tight  md:leading-tight">
+      <motion.div
+        style={{
+          scale: scrollYProgress,
+          opacity: scrollYProgress,
+        }}
+        className="bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-7xl sm:text-[120px] md:text-[150px] lg:text-[200px]  font-medium leading-tight text-transparent sm:leading-tight  md:leading-tight"
+      >
         About me
-      </div>
+      </motion.div>
       <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-28">
         <p className="text-white text-center text-3xl mx-12 font-light leading-tight  sm:leading-tight  md:leading-tight">
           The goal is to expland my learning, knowledge, and skills. to build on
