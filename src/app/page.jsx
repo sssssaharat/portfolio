@@ -43,7 +43,7 @@ export default function Home() {
           >
             <p className="mt-6 text-2xl text-gray-100 font-light sm:text-4xl leading-tight  sm:leading-tight  md:leading-tight">
               Interested in
-              <span className="text-indigo-500"> Fontent,UX & UI </span>
+              <span className="text-indigo-500"> Frontend,UX & UI </span>
               <br></br>
               focussing on designing own dashboard Trade and website Tecnical
               Trade.
